@@ -1,7 +1,7 @@
 echo "Welcome to flip coin simulator"
 HeadCount=0
 TailCount=0
-for i in {1..10}
+while [ $HeadCount -le 20 ] || [ $TailCount -le 20 ]
 do
 random=$((RANDOM%2))
 	if [ $random -eq 0 ]
@@ -10,7 +10,7 @@ random=$((RANDOM%2))
 		HeadCount=$(($HeadCount+1))
 	else
         	echo "tail wins"
-		TailCount=$(($TaailCount+1))
+		TailCount=$(($TailCount+1))
 	fi
 done
 
